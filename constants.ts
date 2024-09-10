@@ -90,6 +90,25 @@ export const PROJECTS: IProject[] = [
     url: "https://play.google.com/store/apps/details?id=com.memmbles.reub&hl=en_GB",
     tech: ["typescript", "express", "angular", "css", "aws"],
   },
+  
+  {
+    name: "Mapolitical Bio",
+    image: "/projects/biography.png",
+    blurImage: "/projects/blur/biography.png",
+    description: "Biography Writing tool, leveraging extensive research and advanced machine learning modelling techniques.",
+    gradient: ["#142D46", "#2E4964"],
+    url: "#",
+    tech: ["typescript", "express", "react", "python", "jupyter"],
+  },
+  {
+    name: "Proticons",
+    image: "/projects/proticons.png",
+    blurImage: "/projects/blur/proticons.png",
+    description: "Ecommerce brand website.",
+    gradient: ["#470700", "#712A23"],
+    url: "https://proticons.com/",
+    tech: ["typescript", "express", "react", "css", "aws"],
+  },
 ];
 
 export const SKILLS = {
