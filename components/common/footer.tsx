@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 // Copyright Sreehari Soman 2023,2024. All Rights Reserved.
 // Project: portfolio
 // Author contact: https://www.linkedin.com/in/sreehari-soman/
