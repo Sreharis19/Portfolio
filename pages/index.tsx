@@ -10,6 +10,8 @@ import React, { useEffect, useState } from "react";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 
 import Layout from "@/components/common/layout";
 import Header from "@/components/common/header";

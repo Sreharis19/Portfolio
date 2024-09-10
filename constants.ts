@@ -187,7 +187,7 @@ export const SKILLS = {
     "html",
     "css",
   ],
-  userInterface: ["figma", "sketch", "illustrator", "photoshop"],
+  backend: ["figma", "sketch", "illustrator", "photoshop"],
   other: ["git", "webpack", "gulp", "lightroom", "aftereffects"],
 };
 

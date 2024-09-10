@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 // Copyright Sreehari Soman 2023,2024. All Rights Reserved.
 // Project: portfolio
 // Author contact: https://www.linkedin.com/in/sreehari-soman/
@@ -447,16 +448,7 @@ const TimelineSection = ({ isDesktop }: IDesktop) => {
 
     // Animation for Timeline SVG
     animateTimeline(timeline, duration);
-  }, [
-    timelineSvg,
-    svgContainer,
-    svgWidth,
-    rightBranchX,
-    screenContainer,
-    svgCheckpointItems.length,
-    isDesktop,
-    svgLength,
-  ]);
+  }, [timelineSvg, svgContainer, svgWidth, rightBranchX, screenContainer, svgCheckpointItems.length, isDesktop, svgLength, setTimelineSvg, initScrollTrigger, animateTimeline]);
 
   const renderSlides = (): React.ReactNode => (
     <div
