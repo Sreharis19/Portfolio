@@ -49,7 +49,7 @@ export const EMAIL = "sreehari.soman@hotmail.com";
 
 export const SOCIAL_LINKS = {
   linkedin: "https://www.linkedin.com/in/sreehari-soman/",
-  github: "https://github.com/sreeharis19",
+  github: "https://github.com/Sreharis19",
 };
 
 export interface IProject {
