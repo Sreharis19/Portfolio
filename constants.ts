@@ -199,7 +199,7 @@ export const TIMELINE: Array<TimelineNodeV2> = [
     size: ItemSize.SMALL,
     subtitle: "Led the development of Ensource, a FinTech hybrid application, improving transaction efficiency by 30%.",
     image: "/company/reubro.svg",
-    slideImage: "/timeline/raw/Ensource2.png",
+    slideImage: "/timeline/raw/ENSource2.png",
     shouldDrawLine: true,
     alignment: Branch.LEFT,
   }, {
