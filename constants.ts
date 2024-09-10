@@ -8,7 +8,7 @@ export const METADATA = {
   title: "Portfolio | Sreehari Soman",
   description:
     "I bridge the gap between design and development. I take responsibility to craft an aesthetic user experience using modern frontend architecture.",
-  siteUrl: "https://sreehari.info/",
+  siteUrl: "https://sreehari.tech/",
 };
 
 export const MENULINKS = [
@@ -98,16 +98,14 @@ export const SKILLS = {
     "react",
     "redux",
     "next",
-    "angular",
-    "gsap",
     "tailwind",
     "sass",
     "svg",
     "html",
     "css",
   ],
-  backend: ["figma", "sketch", "illustrator", "photoshop"],
-  other: ["git", "webpack", "gulp", "lightroom", "aftereffects"],
+  backend: ["nodejs", "express", "graphql", "python", "jupyter", "mongodb", "postgres", "mysql", "jest"],
+  other: ["aws", "git", "docker", "kubernetes", "jenkins", "firebase", "postman"],
 };
 
 export enum Branch {
@@ -133,7 +131,7 @@ export const TIMELINE: Array<TimelineNodeV2> = [
     size: ItemSize.SMALL,
     subtitle: "Developed a user-friendly web application for a Biography Writing tool, improving data processing by 30%.",
     image: "/company/mapolitical.jpg",
-    slideImage: "/company/mapolitical.png",
+    slideImage: "/timeline/raw/biography.png",
     shouldDrawLine: true,
     alignment: Branch.LEFT,
   },
@@ -153,7 +151,7 @@ export const TIMELINE: Array<TimelineNodeV2> = [
     size: ItemSize.SMALL,
     subtitle: "Studied advanced web solutions, semantic data technologies, and web security at Anglia Ruskin University.",
     image: "/company/logo--aru.svg",
-    slideImage: "/company/aru.png",
+    slideImage: "/timeline/raw/graduation.png",
     shouldDrawLine: true,
     alignment: Branch.LEFT,
   }, {
@@ -162,7 +160,7 @@ export const TIMELINE: Array<TimelineNodeV2> = [
     size: ItemSize.SMALL,
     subtitle: "Built scalable applications using Node.js, AWS, and microservices, increasing performance by 35%.",
     image: "/company/hubspire.svg",
-    slideImage: "/company/hubspire.png",
+    slideImage: "/timeline/raw/Nu.png",
     shouldDrawLine: true,
     alignment: Branch.LEFT,
   },
@@ -182,7 +180,7 @@ export const TIMELINE: Array<TimelineNodeV2> = [
     size: ItemSize.SMALL,
     subtitle: "Led the development of Ensource, a FinTech hybrid application, improving transaction efficiency by 30%.",
     image: "/company/reubro.svg",
-    slideImage: "/company/reubro.png",
+    slideImage: "/timeline/raw/Ensource.png",
     shouldDrawLine: true,
     alignment: Branch.LEFT,
   }, {
@@ -199,7 +197,7 @@ export const TIMELINE: Array<TimelineNodeV2> = [
     size: ItemSize.SMALL,
     subtitle: "Worked on e-commerce and ERP solutions using MERN stack, boosting user engagement by 25%.",
     image: "/company/lifetree.svg",
-    slideImage: "/company/lifetree.png",
+    slideImage: "/timeline/raw/LifeTee.png",
     shouldDrawLine: true,
     alignment: Branch.LEFT,
   }, {
@@ -207,7 +205,7 @@ export const TIMELINE: Array<TimelineNodeV2> = [
     title: "Graduated from College 🎓",
     size: ItemSize.SMALL,
     subtitle: "B.E in Computer Science and Engineering from Anna University, specializing in programming and data structures.",
-    image: "/company/AnnaUniversity.svg",
+    image: "/company/AnnaUniversity1.svg",
     slideImage: "/company/AnnaUniversity.svg",
     shouldDrawLine: true,
     alignment: Branch.LEFT,
