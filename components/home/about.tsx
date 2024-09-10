@@ -1,8 +1,7 @@
-// Copyright Sreehari Soman 2023,2024. All Rights Reserved.
+// Copyright Sreehari Soman 2023, 2024. All Rights Reserved.
 // Project: portfolio
-// Author contact: https://www.linkedin.com/in/sreehari-soman/
-// This file is licensed under the MIT License.
-// License text available at https://opensource.org/licenses/MIT
+// Author: Sreehari Soman
+// License: MIT License (https://opensource.org/licenses/MIT)
 
 import { gsap, Linear } from "gsap";
 import React, { MutableRefObject, useEffect, useRef, useState } from "react";
@@ -12,7 +11,7 @@ const AboutSection = () => {
   const quoteRef: MutableRefObject<HTMLDivElement> = useRef(null);
   const targetSection: MutableRefObject<HTMLDivElement> = useRef(null);
 
-  const [willChange, setwillChange] = useState(false);
+  const [willChange, setWillChange] = useState(false);
 
   const initAboutAnimation = (
     quoteRef: MutableRefObject<HTMLDivElement>,
@@ -21,37 +20,28 @@ const AboutSection = () => {
     const timeline = gsap.timeline({
       defaults: { ease: Linear.easeNone, duration: 0.1 },
     });
+
     timeline
       .fromTo(
         quoteRef.current.querySelector(".about-1"),
-        { opacity: 0.2 },
-        { opacity: 1 }
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 1 }
       )
-      .to(quoteRef.current.querySelector(".about-1"), {
-        opacity: 0.2,
-        delay: 0.5,
-      })
+      .to(quoteRef.current.querySelector(".about-1"), { opacity: 0.2, delay: 0.5 })
       .fromTo(
         quoteRef.current.querySelector(".about-2"),
-        { opacity: 0.2 },
-        { opacity: 1 },
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 1 },
         "<"
       )
-      .to(quoteRef.current.querySelector(".about-2"), {
-        opacity: 0.2,
-        delay: 1,
-      })
+      .to(quoteRef.current.querySelector(".about-2"), { opacity: 0.2, delay: 1 })
       .fromTo(
         quoteRef.current.querySelector(".about-3"),
-        { opacity: 0.2 },
-        { opacity: 1 },
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 1 },
         "<"
       )
-      .to(quoteRef.current.querySelector(".about-3"), {
-        opacity: 0.2,
-        delay: 1,
-      });
-      
+      .to(quoteRef.current.querySelector(".about-3"), { opacity: 0.2, delay: 1 });
 
     const scrollTriggerInstance = ScrollTrigger.create({
       trigger: targetSection.current,
@@ -59,49 +49,49 @@ const AboutSection = () => {
       end: "center top",
       scrub: 0,
       animation: timeline,
-      onToggle: (self) => setwillChange(self.isActive),
+      onToggle: (self) => setWillChange(self.isActive),
     });
+
     return scrollTriggerInstance;
   };
 
   useEffect(() => {
-    const aboutScrollTriggerInstance = initAboutAnimation(
-      quoteRef,
-      targetSection
-    );
-
+    const aboutScrollTriggerInstance = initAboutAnimation(quoteRef, targetSection);
     return aboutScrollTriggerInstance.kill;
   }, [quoteRef, targetSection]);
 
   const renderQuotes = (): React.ReactNode => (
-    <h1 ref={quoteRef} className="font-medium text-3xl sm:text-4xl md:text-6xl">
+    <h1
+      ref={quoteRef}
+      className="font-bold text-4xl sm:text-5xl md:text-6xl text-white leading-relaxed max-w-4xl mx-auto text-center"
+    >
       <span
-        className={`about-1 leading-tight ${
+        className={`about-1 block mb-4 ${
           willChange ? "will-change-opacity" : ""
         }`}
       >
-        I am a passionate Full Stack Developer who seamlessly integrates backend robustness with dynamic frontend experiences.{" "}
+        <strong className="text-indigo-400">Passionate Full Stack Developer,</strong> integrating robust backend with dynamic frontend.
       </span>
       <span
-        className={`about-2 leading-tight ${
+        className={`about-2 block mb-4 ${
           willChange ? "will-change-opacity" : ""
         }`}
       >
-        With a strong foundation in modern web architectures and a focus on delivering high-performance applications,
+        Strong foundation in <strong className="text-indigo-400">modern web architectures</strong> with a focus on high-performance applications.
       </span>
       <span
-        className={`about-3 leading-tight ${
+        className={`about-3 block ${
           willChange ? "will-change-opacity" : ""
         }`}
       >
-        I take pride in crafting scalable solutions that drive user engagement and optimize operational efficiency.
+        Crafting scalable solutions to drive <strong className="text-indigo-400">user engagement</strong> and optimize efficiency.
       </span>
     </h1>
   );
 
   return (
     <section
-      className={`tall:pt-20 tall:pb-16 pt-40 pb-24 w-full relative select-none section-container`}
+      className="tall:pt-20 tall:pb-16 pt-40 pb-24 w-full relative select-none section-container bg-gradient-to-r from-gray-800 to-black"
       ref={targetSection}
     >
       {renderQuotes()}
