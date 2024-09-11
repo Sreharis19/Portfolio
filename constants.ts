@@ -146,6 +146,16 @@ export enum ItemSize {
 export const TIMELINE: Array<TimelineNodeV2> = [
   {
     type: NodeTypes.CHECKPOINT,
+    title: "Software Engineering Intern",
+    size: ItemSize.SMALL,
+    subtitle: "Developed a user-friendly web application for financial fraud detection application, incorporating interactive and engaging user experiences.",
+    image: "",
+    slideImage: "",
+    shouldDrawLine: true,
+    alignment: Branch.LEFT,
+  },
+  {
+    type: NodeTypes.CHECKPOINT,
     title: "Data Engineering Intern",
     size: ItemSize.SMALL,
     subtitle: "Developed a user-friendly web application for a Biography Writing tool, improving data processing by 30%.",
